@@ -1,5 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Blanca Da Costa Gomez Carcamo
  */
 
 package com.mycompany.citas;
