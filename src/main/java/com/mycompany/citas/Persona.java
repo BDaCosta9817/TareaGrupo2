@@ -3,9 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-git add class.java                 # Agregar el archivo al staging area
-git commit -m "Optenemos la informacion personal"  # Hacer commit
-git push origin Master   
+
 package com.mycompany.citas;
 
 public class Persona {
