@@ -7,54 +7,49 @@ public class Doctor extends Persona {
     private String especialidad;
     private String fechaCita;
 
-   
-    public Doctor(String nombre, int edad, String direccion) {
-        super(nombre, edad, direccion);  
+    public Doctor(String nombre, int edad, String genero, String direccion, String cinta) {
+        super(nombre, edad, genero, direccion, cinta);  
         this.especialidad = "";
         this.fechaCita = "";
     }
 
-   
     public void elegirEspecialidad() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Seleccione la especialidad del doctor:");
-        System.out.println("1. Odontología");
-        System.out.println("2. Neurología");
-        System.out.println("3. Pediatría");
-        System.out.println("4. Ginecología");
+        System.out.println("1. Odontologia");
+        System.out.println("2. Neurologia");
+        System.out.println("3. Pediatria");
+        System.out.println("4.Doctor General");
 
         int opcion = sc.nextInt();
-
         switch (opcion) {
             case 1:
-                especialidad = "Odontología";
+                especialidad = "Odontologia";
                 break;
             case 2:
-                especialidad = "Neurología";
+                especialidad = "Neurologia";
                 break;
             case 3:
-                especialidad = "Pediatría";
+                especialidad = "Pediatria";
                 break;
             case 4:
-                especialidad = "Ginecología";
+                especialidad = "Doctor General";
                 break;
             default:
-                System.out.println("Opción no válida.");
+                System.out.println("Opcion no valida.");
         }
 
-        
         if (!especialidad.isEmpty()) {
             System.out.println("Especialidad seleccionada: " + especialidad);
         }
     }
 
-    
     public void elegirFechaCita() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Seleccione el día para la cita:");
+        System.out.println("Seleccione el dia para la cita:");
         System.out.println("1. Lunes");
         System.out.println("2. Martes");
-        System.out.println("3. Miércoles");
+        System.out.println("3. Miercoles");
         System.out.println("4. Jueves");
         System.out.println("5. Viernes");
 
@@ -69,7 +64,7 @@ public class Doctor extends Persona {
                 diaSeleccionado = "Martes";
                 break;
             case 3:
-                diaSeleccionado = "Miércoles";
+                diaSeleccionado = "Miercoles";
                 break;
             case 4:
                 diaSeleccionado = "Jueves";
@@ -78,23 +73,26 @@ public class Doctor extends Persona {
                 diaSeleccionado = "Viernes";
                 break;
             default:
-                System.out.println("Opción no válida.");
+                System.out.println("Opción no valida:(");
         }
 
-        
         if (!diaSeleccionado.isEmpty()) {
             System.out.print("Ingrese la fecha para la cita (formato YYYY-MM-DD): ");
-            Scanner fechaScanner = new Scanner(System.in);
-            fechaCita = diaSeleccionado + ", " + fechaScanner.nextLine();
+            sc.nextLine(); 
+            fechaCita = diaSeleccionado + ", " + sc.nextLine();
             System.out.println("Cita programada para: " + fechaCita);
+            
         }
     }
 
-    
     public void mostrarDetalles() {
-        mostrarDatos();  
+        mostrarInformacion();
         System.out.println("Especialidad: " + especialidad);
         System.out.println("Fecha de la cita: " + fechaCita);
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
     }
 }
 
