@@ -1,5 +1,6 @@
 /*La Subclase Deportista permite representar y gestionar información de deportista
  * manteniendo una relación de herencia con la clase Persona para aprovechar los atributos y métodos comúnes.
+ * Fernando Mendoza
  * 
  */
 
