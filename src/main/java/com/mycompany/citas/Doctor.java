@@ -1,3 +1,9 @@
+//Copyrigth: Ruth Bautista.
+
+// Este codigo tiene una superclase Persona con atributos como nombre, edad, genero y direccion ademas de un metodo para mostrar.
+// Esa informacion. La clase Doctor hereda de Persona y agrega sus propios atributos como la especialidad y la fecha de la cita.
+// Los metodos que utilize permiten elegir la especialidad y la fecha de la cita y luego mostrar todos los detalles del doctor. 
+// Tambien se hace una validacion basica de las opciones seleccionadas por el usuario.
 
 package com.mycompany.citas;
 
