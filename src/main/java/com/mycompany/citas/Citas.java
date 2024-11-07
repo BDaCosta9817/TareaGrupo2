@@ -58,6 +58,36 @@ public class Citas {
                         System.out.println("Tipo de cita no válido.");
                         break;
                 }
+                // Preguntar si desea ingresar otra cita
+                System.out.println("Desea ingresar otra cita :) (s/n)");
+                String respuesta = scanner.next();
+                continuar = respuesta.equalsIgnoreCase("s");
+                scanner.nextLine(); 
+            }   System.out.println("\nCitas programadas:");
+            for (Persona persona : citasProgramadas) {
+                if (persona instanceof Doctor) {
+                    ((Doctor) persona).mostrarDetalles();
+                } else if (persona instanceof Deportista) {
+                    ((Deportista) persona).mostrarDetalles();
+                }
+                System.out.println("------------------");
+            }   mostrarResumen();
+            
+        }
+    }
+
+    private static void mostrarResumen() {
+        System.out.println("\nResumen de Citas Programadas:");
+        for (Persona persona : citasProgramadas) {
+            System.out.print("Nombre: " + persona.getNombre() + ", Tipo de cita: ");
+            if (persona instanceof Doctor) {
+                System.out.println("Doctor, Especialidad: " + ((Doctor) persona).getEspecialidad());
+            } else if (persona instanceof Deportista) {
+                System.out.println("Deportista, Deporte: " + ((Deportista) persona).getDeporte());
+            }
+        }
+    }
+}
                 
               
 
