@@ -1,13 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+/*La Subclase Deportista permite representar y gestionar información de deportista
+ * manteniendo una relación de herencia con la clase Persona para aprovechar los atributos y métodos comúnes.
+ * Fernando Mendoza
+ * 
  */
+
 package com.mycompany.citas;
 
-/**
- *
- * @author UserCP
- */
-public class Deportista {
-    
+public class Deportista extends Persona {
+    private final String deporte;
+    private final int habilidad;
+
+    public Deportista(String nombre, int edad, String genero, String direccion, String cita, String deporte, int habilidad) {
+        super(nombre, edad, genero, direccion, cita);
+        this.deporte = deporte;
+        this.habilidad = habilidad;
+    }
+
+    public String getDeporte() {
+        return deporte;
+    }
+
+    public int getHabilidad() {
+        return habilidad;
+    }
+
+    public void mostrarDetalles() {
+        mostrarInformacion();
+        System.out.println("Deporte: " + deporte);
+        System.out.println("Nivel de habilidad: " + habilidad);
+    }
 }
