@@ -9,8 +9,8 @@ public class Deportista extends Persona {
     private final String deporte;
     private final int habilidad;
 
-    public Deportista(String nombre, int edad, String genero, String direccion, String cinta, String deporte, int habilidad) {
-        super(nombre, edad, genero, direccion, cinta);
+    public Deportista(String nombre, int edad, String genero, String direccion, String cita, String deporte, int habilidad) {
+        super(nombre, edad, genero, direccion, cita);
         this.deporte = deporte;
         this.habilidad = habilidad;
     }
