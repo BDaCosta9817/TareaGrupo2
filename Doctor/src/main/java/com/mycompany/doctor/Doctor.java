@@ -1,5 +1,11 @@
+//Copyrigth: Ruth Bautista.
 
-package com.mycompany.trabajogrupal;
+// Este codigo tiene una superclase Persona con atributos como nombre, edad, genero y direccion ademas de un metodo para mostrar.
+// Esa informacion. La clase Doctor hereda de Persona y agrega sus propios atributos como la especialidad y la fecha de la cita.
+// Los metodos que utilize permiten elegir la especialidad y la fecha de la cita y luego mostrar todos los detalles del doctor. 
+// Tambien se hace una validacion basica de las opciones seleccionadas por el usuario.
+
+package com.mycompany.citas;
 
 import java.util.Scanner;
 
@@ -8,8 +14,8 @@ public class Doctor extends Persona {
     private String fechaCita;
 
    
-    public Doctor(String nombre, int edad, String direccion) {
-        super(nombre, edad, direccion);  
+    public Doctor(String nombre, int edad, String genero, String direccion, String cita) {
+        super(nombre, edad, genero, direccion, cita);  
         this.especialidad = "";
         this.fechaCita = "";
     }
@@ -21,7 +27,7 @@ public class Doctor extends Persona {
         System.out.println("1. Odontología");
         System.out.println("2. Neurología");
         System.out.println("3. Pediatría");
-        System.out.println("4. Ginecología");
+        System.out.println("4. Doctor General");
 
         int opcion = sc.nextInt();
 
@@ -36,7 +42,7 @@ public class Doctor extends Persona {
                 especialidad = "Pediatría";
                 break;
             case 4:
-                especialidad = "Ginecología";
+                especialidad = "Doctor General";
                 break;
             default:
                 System.out.println("Opción no válida.");
@@ -92,10 +98,14 @@ public class Doctor extends Persona {
 
     
     public void mostrarDetalles() {
-        mostrarDatos();  
+        mostrarInformacion();  
         System.out.println("Especialidad: " + especialidad);
         System.out.println("Fecha de la cita: " + fechaCita);
     }
+
+    public String getEspecialidad () {
+    }
+            
 }
 
 
